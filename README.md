@@ -1,4 +1,4 @@
-# geospatial_colab
+# Geospatial Colab
 This repository contains notebooks that have been tested using Google Colab (a hosted Jupyter Notebook service) and Google Earth Engine (GEE).
 
 In order to run these notebooks you'll need a Gmail account. You can [freely create a gmail account](https://accounts.google.com/signin) if you do not have one. You'll also need to grant permissions from Google Colab to your Gmail account, so you may want to create a new Gmail account specifically to be used with Google Colab.
@@ -18,7 +18,7 @@ With your Gmail account created, you'll also need to set-up a GEE project to wor
 Now that you have your GEE *project-id*, anywhere in the python code where you see 
 `ee.Initialize(project='{GEE project-id}')`, replace *{GEE project-id}* with your *project-id*.
 
-A barebones example of using GEE and Google Colab requires the following:
+### A barebones example of using GEE and Google Colab requires the following:
 ```
 import geemap
 import ee
@@ -31,4 +31,10 @@ map = geemap.Map()
 map
 ```
 
+### Note
+Since geemap is undergoing rapid development, it's always a good idea up update to the latest version by add and executing the following at the top of you notebook.
+```
+%%capture
+%pip install geemap -U
+```
 Happy Coding
