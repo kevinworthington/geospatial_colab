@@ -18,4 +18,17 @@ With your Gmail account created, you'll also need to set-up a GEE project to wor
 Now that you have your GEE *project-id*, anywhere in the python code where you see 
 `ee.Initialize(project='{GEE project-id}')`, replace *{GEE project-id}* with your *project-id*.
 
+A barebones example of using GEE and Google Colab requires the following:
+```
+import geemap
+import ee
+
+ee.Authenticate()
+
+ee.Initialize(project='{GEE project-id}')
+
+map = geemap.Map()
+map
+```
+
 Happy Coding
